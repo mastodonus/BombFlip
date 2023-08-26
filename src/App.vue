@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container" data-theme="gray-scale">
+  <div class="app-container">
     <GameSidebar></GameSidebar>
     <div class="game-board-container">
       <GameBoard></GameBoard>
@@ -55,16 +55,11 @@ body {
 }
 
 :root {
-  --theme-colour-darkest: #2c3333;
-  --theme-colour-dark: #2e4f4f;
-  --theme-colour-light: #0e8388;
-  --theme-colour-lightest: #cbe4de;
-  --theme-colour-font: black;
   color: var(--theme-colour-font);
   background-color: var(--theme-colour-dark);
 }
 
-html[data-theme="gray-scale"] {
+html[data-theme="dark"] {
   --theme-colour-darkest: #2c3333;
   --theme-colour-dark: #2e4f4f;
   --theme-colour-light: #0e8388;

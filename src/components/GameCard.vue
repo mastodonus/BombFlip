@@ -17,7 +17,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 1px solid var(--theme-colour-lightest);
+  border: 1px solid;
   border-radius: 4px;
+  border-color: var(--theme-colour-lightest);
 }
 </style>
