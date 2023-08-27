@@ -6,7 +6,8 @@
           <GameTile
             v-if="tile.type === 'flip'"
             :tile="tile"
-            @click="tile.flipped = true"
+            @click="this.flipTile(tile)"
+            @contextmenu="this.markTile($event, tile)"
           ></GameTile>
           <GameAnalysisTile
             v-else-if="tile.type === 'analysis'"
@@ -14,16 +15,17 @@
             :tile="tile"
           >
           </GameAnalysisTile>
-          <GameCard v-else class="game-board-tile-memo"></GameCard>
+          <GameCard v-else class="game-board-tile-memo">
+            <div v-if="this.gameIsWon">
+              <h2>Win!</h2>
+            </div>
+            <div v-else-if="this.gameIsLost">
+              <h2>Lose!!</h2>
+            </div></GameCard
+          >
         </div>
       </template>
     </div>
-  </div>
-  <div v-if="this.gameIsWon">
-    <h1>Win!</h1>
-  </div>
-  <div v-else-if="this.gameIsLost">
-    <h1>Lose!!</h1>
   </div>
 </template>
 
@@ -222,6 +224,17 @@ export default {
           bombs: 0,
         }
       );
+    },
+    flipTile(tile) {
+      if (!tile.marked) {
+        tile.flipped = true;
+      }
+    },
+    markTile($event, tile) {
+      $event.preventDefault();
+      if (!tile.flipped) {
+        tile.marked = !tile.marked;
+      }
     },
   },
 };

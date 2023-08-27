@@ -1,0 +1,32 @@
+
+html[data-theme="dark"] {
+  --theme-colour-darkest: #2c3333;
+  --theme-colour-dark: #2e4f4f;
+  --theme-colour-light: #0e8388;
+  --theme-colour-lightest: #cbe4de;
+  --theme-colour-font: black;
+}
+
+html[data-theme="ocean"] {
+  --theme-colour-darkest: #03001c;
+  --theme-colour-dark: #3b466e;
+  --theme-colour-light: #5b8fb9;
+  --theme-colour-lightest: #b6eada;
+  --theme-colour-font: black;
+}
+
+html[data-theme="forest"] {
+  --theme-colour-darkest: #62513f;
+  --theme-colour-dark: #8f7d6c;
+  --theme-colour-light: #C8B6A6;
+  --theme-colour-lightest: #F1DEC9;
+  --theme-colour-font: black;
+}
+
+html[data-theme="moon-mist"] {
+  --theme-colour-darkest: #453C67;
+  --theme-colour-dark: #6D67E4;
+  --theme-colour-light: #46C2CB;
+  --theme-colour-lightest: #F2F7A1;
+  --theme-colour-font: black;
+}

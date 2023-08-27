@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       theme: null,
-      themes: ["dark", "ocean"],
+      themes: ["dark", "ocean", "forest", "moon-mist"],
     };
   },
   mounted() {

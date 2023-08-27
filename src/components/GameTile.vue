@@ -2,7 +2,10 @@
   <div class="game-tile-card">
     <GameFlipCard :flipped="this.tile?.flipped">
       <template v-slot:front>
-        <span class="card-face card-face-hidden">?</span>
+        <span class="card-face card-face-hidden">
+          <span v-if="this.tile.marked"><ShieldIcon></ShieldIcon></span>
+          <span v-else>?</span>
+        </span>
       </template>
       <template v-slot:back>
         <span
@@ -20,12 +23,14 @@
 <script>
 import GameFlipCard from "./GameFlipCard.vue";
 import BombIcon from "vue-material-design-icons/Bomb.vue";
+import ShieldIcon from "vue-material-design-icons/Shield.vue";
 
 export default {
   name: "GameTile",
   components: {
     GameFlipCard,
     BombIcon,
+    ShieldIcon,
   },
   props: {
     tile: {

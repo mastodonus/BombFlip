@@ -1,15 +1,19 @@
 <template>
   <div class="sidebar">
     <ThemePicker class="sidebar-item"></ThemePicker>
+    <RefreshButton class="sidebar-item"></RefreshButton>
   </div>
 </template>
 
 <script>
 import ThemePicker from "./sidebar/ThemePicker.vue";
+import RefreshButton from "./sidebar/RefreshButton.vue";
+
 export default {
   name: "GameSidebar",
   components: {
     ThemePicker,
+    RefreshButton,
   },
 };
 </script>
@@ -22,7 +26,6 @@ export default {
   height: 100%;
   width: 4rem;
   z-index: 1px;
-  padding-top: 1rem;
   background-color: var(--theme-colour-darkest);
   overflow-x: hidden;
   display: flex;
@@ -33,6 +36,7 @@ export default {
 
 .sidebar-item {
   color: var(--theme-colour-light);
+  margin-top: 1rem;
 }
 
 .sidebar-item:hover {

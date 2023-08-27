@@ -58,20 +58,4 @@ body {
   color: var(--theme-colour-font);
   background-color: var(--theme-colour-dark);
 }
-
-html[data-theme="dark"] {
-  --theme-colour-darkest: #2c3333;
-  --theme-colour-dark: #2e4f4f;
-  --theme-colour-light: #0e8388;
-  --theme-colour-lightest: #cbe4de;
-  --theme-colour-font: black;
-}
-
-html[data-theme="ocean"] {
-  --theme-colour-darkest: #03001c;
-  --theme-colour-dark: #3b466e;
-  --theme-colour-light: #5b8fb9;
-  --theme-colour-lightest: #b6eada;
-  --theme-colour-font: black;
-}
 </style>
