@@ -8,8 +8,6 @@
 
 ## A Voltorb Flip clone created in Vue.js
 
----
-
 <br/>
 
 ![Preview](./public/preview.png)
